@@ -1,46 +1,70 @@
-🚀 FocusFlow – Your Personalized Study Companion
-<div align="center"> <img src="https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black" /> <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> <img src="https://img.shields.io/badge/Firebase-9.x-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" /> <img src="https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Framer_Motion-10.x-0055FF?style=for-the-badge&logo=framer&logoColor=white" /> </div> <div align="center"> <h3>Built by <strong>Ashutosh Pankaj Rai</strong></h3>
-[![GitHub](https://img.shields.io/badge/GitHubtarted from a simple problem: juggling multiple tabs while studying. One platform, all tools unified.
+text
+# 🚀 FocusFlow – Your Personalized Study Companion
 
-✨ Features
-⏱️ Pomodoro Timer with session tracking
+<div align="center">
+  <img src="https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Firebase-9.x-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Framer_Motion-10.x-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
+</div>
 
-📚 Field-Specific Tools for different study areas
+<div align="center">
+  <h3>Built by <strong>Ashutosh Pankaj Rai</strong></h3>
+  
+  [![GitHub](https://img.shields.io/badge/GitHub-Ashurai84-181717?style=for-the-badge&logo=github)](https://github.com/Ashurai84)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/ashutosh-rai)
+</div>
 
-💬 Motivational Quotes
+---
 
-📊 Analytics Dashboard
+## 📌 About
 
-🎨 Modern UI with dark/light themes
+**FocusFlow** started from a simple problem: juggling multiple tabs while studying. One platform, all tools unified.
 
-🎵 Music Integration (Coming back soon - fixing server issues)
+### ✨ Features
+- ⏱️ **Pomodoro Timer** with session tracking
+- 📚 **Field-Specific Tools** for different study areas
+- 💬 **Motivational Quotes** 
+- 📊 **Analytics Dashboard** 
+- 🎨 **Modern UI** with dark/light themes
+- 🎵 **Music Integration** (*Coming back soon - fixing server issues*)
 
-🛠️ Tech Stack
-Frontend:
+---
 
-React 18 + TypeScript
+## 🛠️ Tech Stack
 
-Vite
+**Frontend:**
+- React 18 + TypeScript
+- Vite
+- TailwindCSS
+- Framer Motion
+- Zustand
 
-TailwindCSS
+**Backend:**
+- Firebase (Auth, Firestore, Hosting)
+- Spotify Web API
 
-Framer Motion
+---
 
-Zustand
+## 🚀 Installation
 
-Backend:
-
-Firebase (Auth, Firestore, Hosting)
-
-Spotify Web API
-
-🚀 Installation
-bash
 git clone https://github.com/Ashurai84/focusflow.git
-cd focusflow-study-platform
+cd focusflow
 npm install
 npm run dev
-👨💻 Developer
-Ashutosh Pankaj Rai - Full-Stack Developer passionate about creating productive study experiences.
 
-<div align="center"> Made with ❤️ by Ashutosh Pankaj Rai </div>
+text
+
+---
+
+## 👨‍💻 Developer
+
+**Ashutosh Pankaj Rai** - Full-Stack Developer passionate about creating productive study experiences.
+
+---
+
+<div align="center">
+  Made with ❤️ by Ashutosh Pankaj Rai
+</div>

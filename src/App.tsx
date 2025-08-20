@@ -10,9 +10,6 @@ import { MedicalModels } from './pages/MedicalModels';
 import { ProFeatures } from './pages/ProFeatures';
 import { Login } from './pages/Login';
 import AdminDashboard from './components/admin/AdminDashboard';
-
-
-import { SpotifyCallback } from './pages/SpotifyCallback';
 import { Navbar } from './components/Navbar';
 import { AnimatePresence } from 'framer-motion';
 import { useThemeStore } from './store/theme';
@@ -20,16 +17,56 @@ import { useAuthStore } from './store/auth';
 import { useTimerStore } from './store/timer';
 import { useSpotifyStore } from './store/spotify';
 import { UserTypeSelector } from './components/UserTypeSelector';
+import { spotifyService } from './services/spotify';
+import toast from 'react-hot-toast';
 
 function AppContent() {
   const location = useLocation();
   const { isAuthenticated, loading, needsFieldSelection } = useAuthStore();
-  const { isAuthenticated: spotifyAuthenticated } = useSpotifyStore();
+  const { isAuthenticated: spotifyAuthenticated, fetchUserData } = useSpotifyStore();
 
-  // Handle Spotify callback route
-  if (location.pathname === '/callback') {
-    return <SpotifyCallback />;
-  }
+  // ✅ Handle Spotify OAuth callback
+  useEffect(() => {
+    const handleSpotifyCallback = async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+      const state = urlParams.get('state');
+      
+      if (code && state) {
+        try {
+          console.log('🎵 Processing Spotify OAuth callback...');
+          
+          // Show loading toast
+          const loadingToast = toast.loading('Connecting to Spotify...');
+          
+          // Exchange code for tokens
+          await spotifyService.exchangeCodeForToken(code, state);
+          
+          // Fetch user data after successful authentication
+          await fetchUserData();
+          
+          console.log('✅ Spotify connected successfully!');
+          
+          // Clean up URL parameters without page reload
+          const newUrl = window.location.pathname + window.location.hash;
+          window.history.replaceState({}, document.title, newUrl);
+          
+          // Success notification
+          toast.success('🎵 Spotify connected successfully!', { id: loadingToast });
+          
+        } catch (error) {
+          console.error('❌ Spotify connection failed:', error);
+          toast.error('Failed to connect to Spotify. Please try again.');
+        }
+      }
+    };
+
+    // Only handle callback if we have the required parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('code') && urlParams.has('state')) {
+      handleSpotifyCallback();
+    }
+  }, [fetchUserData]);
 
   // Show loading screen while initializing
   if (loading) {
@@ -72,8 +109,6 @@ function AppContent() {
             <Route path="/medical-models" element={<MedicalModels />} />
             <Route path="/pro" element={<ProFeatures />} />
             <Route path="/admin" element={<AdminDashboard />} />
-
-            <Route path="/callback" element={<SpotifyCallback />} />
           </Routes>
         </AnimatePresence>
         <Navbar />
