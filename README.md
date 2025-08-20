@@ -36,7 +36,7 @@ Spotify Web API
 
 🚀 Installation
 bash
-git clone https://github.com/Ashurai84/focusflow-study-platform.git
+git clone https://github.com/Ashurai84/focusflow.git
 cd focusflow-study-platform
 npm install
 npm run dev
