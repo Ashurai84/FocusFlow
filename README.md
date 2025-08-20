@@ -1,4 +1,4 @@
-text
+<img width="1362" height="682" alt="Screenshot 2025-08-21 at 12 30 15 AM" src="https://github.com/user-attachments/assets/47296443-5257-455c-995a-0afa4a16d2df" />text
 # 🚀 FocusFlow – Your Personalized Study Companion
 
 <div align="center">
@@ -29,7 +29,19 @@ text
 - 💬 **Motivational Quotes** 
 - 📊 **Analytics Dashboard** 
 - 🎨 **Modern UI** with dark/light themes
-- 🎵 **Music Integration** (*Coming back soon - fixing server issues*)
+- 🎵 **Music Integration** (*Currently fixing server issues*)
+
+---
+
+
+
+## 🎵 Spotify Integration Preview
+
+*In the future, this is how the Spotify integration will look. Stay connected for updates!*
+
+![Spotify Integration Preview](https://ik.imagekit.io/ruaxqewuc/Screenshot%202025-08-21%20at%2012.30.15%E2%80%AFAM.png?updatedAt=1755718255337)
+
+
 
 ---
 
@@ -50,8 +62,8 @@ text
 
 ## 🚀 Installation
 
-git clone https://github.com/Ashurai84/focusflow.git
-cd focusflow
+git clone https://github.com/Ashurai84/focusflow-study-platform.git
+cd focusflow-study-platform
 npm install
 npm run dev
 
