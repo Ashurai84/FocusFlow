@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "FocusFlow - Study Companion",
+  "version": "1.0.0",
+  "description": "Interactive study companion with Pomodoro timer, music, and motivation",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "FocusFlow"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
